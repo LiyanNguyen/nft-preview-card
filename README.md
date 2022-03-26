@@ -10,8 +10,8 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 
 ### Links
-- Solution URL: 
-- Live Site URL: 
+- Solution URL: https://github.com/LiyanNguyen/nft-preview-card
+- Live Site URL: https://liyannguyen.github.io/nft-preview-card
 
 ### Built with
 - Semantic HTML5 markup
