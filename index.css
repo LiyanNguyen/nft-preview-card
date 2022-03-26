@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+	font-family: 'Outfit', sans-serif;
+	/* font-size: 18px; */
+
+	/* Primary Colors */
+	--soft-blue: hsl(215, 51%, 70%);
+	--cyan: hsl(178, 100%, 50%);
+
+	/* Neutral Colors */
+	--main-bg: hsl(217, 54%, 11%);
+	--card-bg: hsl(216, 50%, 16%);
+	--line: hsl(215, 32%, 27%);
+	--white: hsl(0, 0%, 100%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--main-bg);
+}
+
+.nft-card {
+	padding: 20px;
+	max-width: 300px;
+	min-height: 500px;
+	background-color: var(--card-bg);
+	border-radius: 20px;
+	line-height: 1.5;
+}
+
+.img-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.img-container img {
+	height: 260px;
+	width: 260px;
+	border-radius: 10px;
+	z-index: 0;
+}
+
+.img-overlay {
+	position: absolute;
+	height: 260px;
+	width: 260px;
+	border-radius: 10px;
+	z-index: 1;
+	opacity: 0;
+  transition: .5s;
+	background-color: var(--cyan);
+}
+
+.img-overlay-2 {
+	position: absolute;
+	z-index: 2;
+	opacity: 0;
+  transition: .5s;
+}
+
+.img-overlay-2 img {
+	width: 45px;
+	height: 45px;
+}
+
+.img-container:hover .img-overlay {
+	opacity: 0.5;
+}
+
+.img-container:hover .img-overlay-2 {
+	opacity: 1;
+}
+
+.nft-card h2 {
+	margin-top: 20px;
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: var(--white);
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.nft-card h2:hover {
+	color: var(--cyan);
+}
+
+.nft-card p {
+	margin-top: 15px;
+	color: var(--soft-blue);
+	font-weight: 300;
+}
+
+.nft-info {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0;
+}
+
+.nft-value {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 5px;
+	color: var(--cyan);
+}
+
+.nft-duration {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 5px;
+	color: var(--soft-blue);
+}
+
+.line {
+	height: 1px;
+	background-color: var(--line);
+}
+
+.author-info {
+	margin: 10px 0;
+	padding-top: 10px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.author-info img {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: 1px solid var(--white);
+}
+
+.author-info div {
+	font-size: 14px;
+	color: var(--soft-blue);
+}
+
+.author-info span {
+	color: var(--white);
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.author-info span:hover {
+	color: var(--cyan);
+}
+
+/* - Mobile: 375px
+- Desktop: 1440px */
